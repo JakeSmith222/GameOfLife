@@ -2,9 +2,11 @@
 
 class Cell {
 public:
+	Cell();
 	int getNearbyInfo();
 	void populate();
 	bool CheckPopulation() { return isPopulated; }
+
 private:
 	bool isPopulated;
 	int populatedCellsNearby;
@@ -15,5 +17,5 @@ public:
 	Board();
 	Board(int x, int y);
 private:
-	Cell boardArray[5][5];
+	Cell **boardArray;
 };
