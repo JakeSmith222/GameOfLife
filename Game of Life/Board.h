@@ -5,10 +5,11 @@ public:
 private:
 	class cell {
 	public:
-		int getNeighbors();
-		void getPopulated();
+		int getNearbyInfo();
+		void populate();
 		bool CheckPopulation() { return isPopulated; }
 	private:
 		bool isPopulated;
+		int populatedCellsNearby;
 	};
 };
