@@ -5,7 +5,10 @@ public:
 	Cell();
 	int getNearbyInfo();
 	void populate();
-	bool CheckPopulation() { return isPopulated; }
+	bool checkSolitude();
+	bool checkOverpopulation();
+	bool checkSurvive();
+
 
 private:
 	bool isPopulated;
