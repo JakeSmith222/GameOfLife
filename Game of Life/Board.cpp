@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Board.h"
+#include <stdlib.h>
 
 Board::Board(int x, int y) {
 	boardArray = new Cell*[x];
@@ -17,4 +18,8 @@ Board::Board() {
 Cell::Cell() {
 	isPopulated = false;
 	populatedCellsNearby = 0;
+}
+
+void Board::clearScreen() {
+	system("CLS");
 }
