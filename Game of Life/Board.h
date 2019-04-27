@@ -3,7 +3,12 @@ class Board {
 public:
 
 private:
-	struct cell {
+	class cell {
+	public:
+		int getNeighbors();
+		void getPopulated();
+		bool CheckPopulation() { return isPopulated; }
+	private:
 		bool isPopulated;
 	};
 };
