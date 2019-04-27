@@ -4,6 +4,7 @@ class Cell {
 public:
 	Cell();
 	int getNearbyInfo();
+	bool checkPopulated() { return isPopulated; } //returns true when populated
 	void populate();
 	bool checkSolitude();
 	bool checkOverpopulation();
@@ -21,7 +22,9 @@ public:
 	Board(int x, int y);
 	void clearScreen();
 	void clearBoard();
-	bool isEmpty();
+	bool isEmpty();	
+	int getRows();
+	int getCols();
 private:
 	Cell **boardArray;
 };

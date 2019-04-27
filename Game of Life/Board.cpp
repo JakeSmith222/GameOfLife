@@ -23,3 +23,14 @@ Cell::Cell() {
 void Board::clearScreen() {
 	system("CLS");
 }
+
+bool Board::isEmpty() {
+	for (int i = 0; i < getRows(); i++) {
+		for (int j = 0; j < getCols(); j++) {
+			if (boardArray[i][j].checkPopulated()) {
+				return false;
+			}
+		}
+	}
+	return true;
+}
